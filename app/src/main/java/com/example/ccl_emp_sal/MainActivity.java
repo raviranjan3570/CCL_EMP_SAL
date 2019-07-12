@@ -26,11 +26,11 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 Intent loginIntent = new Intent(MainActivity.this, SecondActivity.class);
+                String pis = input.getText().toString();
+                loginIntent.putExtra("pis", pis);
                 startActivity(loginIntent);
             }
         });
-
-
 
         // date picker
         date_input.setInputType(InputType.TYPE_NULL);

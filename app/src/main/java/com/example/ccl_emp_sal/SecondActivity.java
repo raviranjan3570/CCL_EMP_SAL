@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -51,6 +53,17 @@ public class SecondActivity extends AppCompatActivity {
         // Kick off an {@link AsyncTask} to perform the network request
         SalaryAsyncTask task = new SalaryAsyncTask();
         task.execute();
+
+        final Button detail = findViewById(R.id.detail);
+
+        // on click listener
+        detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent detailIntent = new Intent(SecondActivity.this, ThirdActivity.class);
+                startActivity(detailIntent);
+            }
+        });
     }
 
     /**

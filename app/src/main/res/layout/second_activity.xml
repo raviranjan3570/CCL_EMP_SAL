@@ -164,7 +164,8 @@
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"
-                android:text="Net Paid : "/>
+                android:text="Net Paid : "
+                android:textColor="#212121"/>
 
             <TextView
                 android:id="@+id/totalSalary"
@@ -174,19 +175,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
+                android:textColor="#212121"
                 android:paddingLeft="16dp"/>
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/total"
-            android:layout_width="match_parent"
+            android:id="@+id/detail"
+            android:background="@drawable/rounded_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:paddingLeft="16dp"
             android:textSize="14sp"
             android:fontFamily="sans-serif-black"
-            android:text="Get Details" />
+            android:text="Click here for details"
+            android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>
 

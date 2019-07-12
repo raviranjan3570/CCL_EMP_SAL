@@ -8,31 +8,6 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="144dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/round_person_black_24" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="12dp"
-            android:text="Salary Structure"
-            android:textColor="@color/colorAccent"
-            android:fontFamily="sans-serif-black"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center"
@@ -104,6 +79,118 @@
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"
+                android:text="Unit Code : "/>
+
+            <TextView
+                android:id="@+id/unit_code"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:paddingLeft="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"
+                android:text="Basic Paid : "/>
+
+            <TextView
+                android:id="@+id/basic_paid"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:paddingLeft="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"
+                android:text="VDA : "/>
+
+            <TextView
+                android:id="@+id/vda"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:paddingLeft="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"
+                android:text="SDA : "/>
+
+            <TextView
+                android:id="@+id/sda"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:textSize="16sp"
+                android:paddingLeft="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
@@ -162,6 +249,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
+                android:textColor="#212121"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"
                 android:text="Net Paid : "/>
@@ -173,20 +261,11 @@
                 android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#212121"
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"/>
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/total"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:paddingLeft="16dp"
-            android:textSize="14sp"
-            android:fontFamily="sans-serif-black"
-            android:text="Get Details" />
 
     </LinearLayout>
 

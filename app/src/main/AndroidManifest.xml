@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SecondActivity"
-            android:label="Salary Details"
             android:parentActivityName="com.example.ccl_emp_sal.MainActivity"/>
+        <activity android:name=".ThirdActivity"
+            android:parentActivityName="com.example.ccl_emp_sal.SecondActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
