@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -59,34 +58,26 @@ public class SecondActivity extends AppCompatActivity {
      */
     private void updateUi(Detail salary) {
 
-        // Display the basic salary in the UI
-        TextView basicTextView = findViewById(R.id.basic);
-        basicTextView.setText(salary.mBasicSalary);
+        // Display the name in the UI
+        TextView nameTextView = findViewById(R.id.name);
+        nameTextView.setText(salary.mName);
 
-        // Display the Transport allowance in the UI
-        TextView TransportTextView = findViewById(R.id.transport);
-        TransportTextView.setText(salary.mTransportAllowance);
+        // Display the designation in the UI
+        TextView designationTextView = findViewById(R.id.designation);
+        designationTextView.setText(salary.mDesignation);
 
-        // Display the Miscellaneous Salary in the UI
-        TextView miscellaneousTextView = findViewById(R.id.misc);
-        miscellaneousTextView.setText(salary.mMiscellaneous);
+        // Display the total earning in the UI
+        TextView grossAmountTextView = findViewById(R.id.total_earning);
+        grossAmountTextView.setText(salary.mGrossAmount);
 
-        // Display the Transport allowance in the UI
-        TextView taxTextView = findViewById(R.id.tax);
-        taxTextView.setText(salary.mProfessionalTax);
+        // Display the deduction in the UI
+        TextView deductionTextView = findViewById(R.id.deduction);
+        deductionTextView.setText(salary.mTotalDeduction);
 
-        Button button = findViewById(R.id.total);
-        int total = totalSalary(salary);
-        button.setText("Total salary: " + total + " Rupees");
-    }
+        // Display the net salary in the UI
+        TextView netSalaryTextView = findViewById(R.id.deduction);
+        netSalaryTextView.setText(salary.mTotalDeduction);
 
-    // this function calculate sum
-    private int totalSalary(Detail salary) {
-        int base = Integer.parseInt(salary.mBasicSalary);
-        int transport = Integer.parseInt(salary.mTransportAllowance);
-        int misc = Integer.parseInt(salary.mMiscellaneous);
-        int tax = Integer.parseInt(salary.mProfessionalTax);
-        return base + transport + misc - tax;
     }
 
     /**
@@ -226,14 +217,21 @@ public class SecondActivity extends AppCompatActivity {
 
                     JSONObject currentSalary = salaryArray.getJSONObject(i);
 
-                    String pis = currentSalary.getString("pis");
-                    String basic = currentSalary.getString("basic");
-                    String transport = currentSalary.getString("transport");
-                    String misc = currentSalary.getString("misc");
-                    String tax = currentSalary.getString("tax");
+                    String emp_code = currentSalary.getString("EMP_CODE");
+                    String name = currentSalary.getString("NAME");
+                    String designation = currentSalary.getString("DESIGNATION");
+                    String unit_code = currentSalary.getString("UNIT_CODE");
+                    String year = currentSalary.getString("YEAR");
+                    String month = currentSalary.getString("MONTH");
+                    String basic_paid = currentSalary.getString("BASIC_PAID");
+                    String vda = currentSalary.getString("VDA");
+                    String sda = currentSalary.getString("SDA");
+                    String gross_amount = currentSalary.getString("GROSS_AMOUNT");
+                    String total_deduction_amount = currentSalary.getString("TOTAL_DEDUCTION_AMOUNT");
+                    String net_paid = currentSalary.getString("NET_PAID");
 
                     // Create a new {@link Event} object
-                    return new Detail(pis, basic, transport, misc, tax);
+                    return new Detail(emp_code, name, designation, unit_code, year, month, basic_paid, vda, sda, gross_amount, total_deduction_amount, net_paid);
                 }
             } catch (JSONException e) {
                 Log.e(LOG_TAG, "Problem parsing the JSON results", e);
