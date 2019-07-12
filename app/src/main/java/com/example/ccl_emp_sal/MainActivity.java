@@ -12,16 +12,14 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity  {
 
-    DatePickerDialog picker;
-    EditText  date_input;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        date_input= findViewById(R.id.date_input);
-        Button login = findViewById(R.id.login_button);
+        final EditText input = findViewById(R.id.user_id);
+        final EditText date_input= findViewById(R.id.date_input);
+        final Button login = findViewById(R.id.login_button);
 
         // on click listener
         login.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity  {
                 int month = calender.get(Calendar.MONTH);
                 int year = calender.get(Calendar.YEAR);
                 // date picker dialog
-                picker = new DatePickerDialog(MainActivity.this,
+                DatePickerDialog picker = new DatePickerDialog(MainActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int day) {
