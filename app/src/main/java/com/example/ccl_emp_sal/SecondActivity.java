@@ -88,9 +88,46 @@ public class SecondActivity extends AppCompatActivity {
         deductionTextView.setText(salary.mTotalDeduction);
 
         // Display the net salary in the UI
-        TextView netSalaryTextView = findViewById(R.id.deduction);
-        netSalaryTextView.setText(salary.mTotalDeduction);
+        TextView netSalaryTextView = findViewById(R.id.total_salary);
+        netSalaryTextView.setText(salary.mNetPaid);
 
+        // for third activity
+
+        // Display the name in the UI
+        TextView nameTextView1 = findViewById(R.id.name1);
+        nameTextView1.setText(salary.mName);
+
+        // Display the designation in the UI
+        TextView designationTextView1 = findViewById(R.id.designation1);
+        designationTextView1.setText(salary.mDesignation);
+
+        // Display the total earning in the UI
+        TextView grossAmountTextView1 = findViewById(R.id.total_earning1);
+        grossAmountTextView1.setText(salary.mGrossAmount);
+
+        // Display the deduction in the UI
+        TextView deductionTextView1 = findViewById(R.id.deduction1);
+        deductionTextView1.setText(salary.mTotalDeduction);
+
+        // Display the net salary in the UI
+        TextView netSalaryTextView1 = findViewById(R.id.total_salary1);
+        netSalaryTextView1.setText(salary.mNetPaid);
+
+        // Display the unit code in the UI
+        TextView unitCodeTextView = findViewById(R.id.unit_code);
+        unitCodeTextView.setText(salary.mUnitCode);
+
+        // Display the basic salary in the UI
+        TextView basicPaidTextView = findViewById(R.id.basic_paid);
+        basicPaidTextView.setText(salary.mBasicSalary);
+
+        // Display the vda in the UI
+        TextView vdaTextView = findViewById(R.id.vda);
+        vdaTextView.setText(salary.mVda);
+
+        // Display the sda in the UI
+        TextView sdaTextView = findViewById(R.id.sda);
+        sdaTextView.setText(salary.mSda);
     }
 
     /**

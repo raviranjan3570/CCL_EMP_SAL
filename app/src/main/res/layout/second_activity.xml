@@ -168,7 +168,7 @@
                 android:textColor="#212121"/>
 
             <TextView
-                android:id="@+id/totalSalary"
+                android:id="@+id/total_salary"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
                 android:textSize="16sp"
