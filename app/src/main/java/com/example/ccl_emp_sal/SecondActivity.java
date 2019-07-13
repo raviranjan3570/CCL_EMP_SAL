@@ -139,12 +139,6 @@ public class SecondActivity extends AppCompatActivity {
     private class SalaryAsyncTask extends AsyncTask<java.net.URL, Void, Detail> {
 
         @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-        }
-
-        @Override
         protected Detail doInBackground(URL... urls) {
 
             // Create URL object
@@ -176,6 +170,7 @@ public class SecondActivity extends AppCompatActivity {
                 return;
             }
             updateUi(salary);
+            storeValue(salary);
         }
 
         /**
@@ -195,7 +190,9 @@ public class SecondActivity extends AppCompatActivity {
 
                 // for encoding particular input
                 Uri.Builder builder = new Uri.Builder()
-                        .appendQueryParameter("pis", pis);
+                        .appendQueryParameter("pis", pis)
+                        .appendQueryParameter("year", year)
+                        .appendQueryParameter("month", month);
 
                 String query = builder.build().getEncodedQuery();
 

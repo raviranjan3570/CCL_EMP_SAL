@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity  {
                 String pis = input.getText().toString();
                 String date = date_input.getText().toString();
                 String[] separated = date.split("/");
-                String monthOfTheYear = separated[0];
-                String year = separated[1];
+                String year = separated[0];
+                String monthOfTheYear = separated[1];
                 loginIntent.putExtra("pis", pis);
-                loginIntent.putExtra("month", monthOfTheYear);
                 loginIntent.putExtra("year", year);
+                loginIntent.putExtra("month", monthOfTheYear);
                 startActivity(loginIntent);
             }
         });
