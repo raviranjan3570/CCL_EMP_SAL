@@ -118,15 +118,15 @@ public class SecondActivity extends AppCompatActivity {
 
         // Display the total earning in the UI
         TextView grossAmountTextView = findViewById(R.id.total_earning);
-        grossAmountTextView.setText(salary.mGrossAmount);
+        grossAmountTextView.setText(salary.mGrossAmount + " Rs");
 
         // Display the deduction in the UI
         TextView deductionTextView = findViewById(R.id.deduction);
-        deductionTextView.setText(salary.mTotalDeduction);
+        deductionTextView.setText(salary.mTotalDeduction + " Rs");
 
         // Display the net salary in the UI
         TextView netSalaryTextView = findViewById(R.id.total_salary);
-        netSalaryTextView.setText(salary.mNetPaid);
+        netSalaryTextView.setText(salary.mNetPaid + " Rs");
     }
 
     /**

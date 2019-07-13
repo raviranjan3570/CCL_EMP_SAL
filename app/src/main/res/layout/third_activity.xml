@@ -25,7 +25,7 @@
                 android:layout_gravity="center_vertical"
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
-                android:text="Name : "
+                android:text="Name :"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
-                android:text="Designation : "
+                android:text="Designation :"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-black"/>
 
@@ -83,7 +83,7 @@
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
-                android:text="Unit Code : "/>
+                android:text="Unit Code :"/>
 
             <TextView
                 android:id="@+id/unit_code"
@@ -111,7 +111,7 @@
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
-                android:text="Basic Paid : "/>
+                android:text="Basic Paid :"/>
 
             <TextView
                 android:id="@+id/basic_paid"
@@ -139,7 +139,7 @@
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
-                android:text="VDA : "/>
+                android:text="VDA :"/>
 
             <TextView
                 android:id="@+id/vda"
@@ -167,7 +167,7 @@
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
-                android:text="SDA : "/>
+                android:text="SDA :"/>
 
             <TextView
                 android:id="@+id/sda"
@@ -195,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
-                android:text="Total Earning : "/>
+                android:text="Total Earning :"/>
 
             <TextView
                 android:id="@+id/total_earning1"
@@ -223,7 +223,7 @@
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
-                android:text="Total Deduction : "/>
+                android:text="Total Deduction :"/>
 
             <TextView
                 android:id="@+id/deduction1"
@@ -252,7 +252,7 @@
                 android:textColor="#212121"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"
-                android:text="Net Paid : "/>
+                android:text="Net Paid :"/>
 
             <TextView
                 android:id="@+id/total_salary1"
