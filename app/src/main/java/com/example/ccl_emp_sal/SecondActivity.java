@@ -1,5 +1,7 @@
 package com.example.ccl_emp_sal;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -9,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -136,6 +139,12 @@ public class SecondActivity extends AppCompatActivity {
     private class SalaryAsyncTask extends AsyncTask<java.net.URL, Void, Detail> {
 
         @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        @Override
         protected Detail doInBackground(URL... urls) {
 
             // Create URL object
@@ -162,6 +171,7 @@ public class SecondActivity extends AppCompatActivity {
          */
         @Override
         protected void onPostExecute(Detail salary) {
+
             if (salary == null) {
                 return;
             }

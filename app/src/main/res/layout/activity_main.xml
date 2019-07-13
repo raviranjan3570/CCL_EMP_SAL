@@ -59,7 +59,7 @@
         android:layout_marginEnd="8dp"
         android:focusableInTouchMode="false"
         android:ems="10"
-        android:hint="Enter Date"
+        android:hint="Enter Month And Year"
         android:fontFamily="sans-serif-light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
