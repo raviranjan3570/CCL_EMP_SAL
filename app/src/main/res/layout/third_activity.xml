@@ -250,7 +250,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textColor="#212121"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:paddingLeft="16dp"
                 android:text="Net Paid :"/>
 
@@ -258,7 +258,7 @@
                 android:id="@+id/total_salary1"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#212121"

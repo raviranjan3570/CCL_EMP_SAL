@@ -43,15 +43,15 @@ public class ThirdActivity extends AppCompatActivity {
 
         // Display the total earning in the UI
         TextView grossAmountTextView = findViewById(R.id.total_earning1);
-        grossAmountTextView.setText(totalEarning + " Rs");
+        grossAmountTextView.setText(totalEarning + " \u20B9");
 
         // Display the deduction in the UI
         TextView deductionTextView = findViewById(R.id.deduction1);
-        deductionTextView.setText(totalDeduction + " Rs");
+        deductionTextView.setText(totalDeduction + " \u20B9");
 
         // Display the net salary in the UI
         TextView netSalaryTextView = findViewById(R.id.total_salary1);
-        netSalaryTextView.setText(netPaid + " Rs");
+        netSalaryTextView.setText(netPaid + " \u20B9");
 
         // Display the unit code in the UI
         TextView unitCodeTextView = findViewById(R.id.unit_code);
@@ -59,14 +59,14 @@ public class ThirdActivity extends AppCompatActivity {
 
         // Display the basic salary in the UI
         TextView basicSalaryTextView = findViewById(R.id.basic_paid);
-        basicSalaryTextView.setText(basic + " Rs");
+        basicSalaryTextView.setText(basic + " \u20B9");
 
         // Display the vda in the UI
         TextView vdaTextView = findViewById(R.id.vda);
-        vdaTextView.setText(vda + " Rs");
+        vdaTextView.setText(vda + " \u20B9");
 
         // Display the sda in the UI
         TextView sdaTextView = findViewById(R.id.sda);
-        sdaTextView.setText(sda + " Rs");
+        sdaTextView.setText(sda + " \u20B9");
     }
 }

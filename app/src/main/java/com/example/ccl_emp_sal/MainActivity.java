@@ -17,11 +17,9 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity  {
 
-    TextView date_input;
     String monthYearStr;
-    SimpleDateFormat sdf = new SimpleDateFormat("MMM yyyy");
-    SimpleDateFormat input = new SimpleDateFormat("yyyy-MM-dd");
-
+    String pis;
+    String date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +34,9 @@ public class MainActivity extends AppCompatActivity  {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                pis = input.getText().toString();
+                date = date_input.getText().toString();
                 Intent loginIntent = new Intent(MainActivity.this, SecondActivity.class);
-                String pis = input.getText().toString();
-                String date = date_input.getText().toString();
                 String[] separated = date.split("/");
                 String year = separated[0];
                 String monthOfTheYear = separated[1];
@@ -64,5 +62,9 @@ public class MainActivity extends AppCompatActivity  {
                 pickerDialog.show(getSupportFragmentManager(), "MonthYearPickerDialog");
             }
         });
+
+        if (pis != null && date != null){
+
+        }
     }
 }
