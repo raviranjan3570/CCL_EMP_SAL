@@ -39,7 +39,20 @@ public class SecondActivity extends AppCompatActivity {
      */
     private static final String URL = "http://192.168.43.123/ccl/fetch.php";
 
+    // fields
     public String pis = null;
+    public String month = null;
+    public String year = null;
+    public String name = null;
+    public String designation = null;
+    public String unitCode = null;
+    public String basic = null;
+    public String vda = null;
+    public String sda = null;
+    public String totalEarning = null;
+    public String totalDeduction = null;
+    public String netPaid = null;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +62,8 @@ public class SecondActivity extends AppCompatActivity {
         // gets the value of userId
         Intent intent = getIntent();
         pis = intent.getStringExtra("pis");
+        month = intent.getStringExtra("month");
+        year = intent.getStringExtra("year");
 
         // Kick off an {@link AsyncTask} to perform the network request
         SalaryAsyncTask task = new SalaryAsyncTask();
@@ -61,9 +76,31 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent detailIntent = new Intent(SecondActivity.this, ThirdActivity.class);
+                detailIntent.putExtra("name", name);
+                detailIntent.putExtra("designation", designation);
+                detailIntent.putExtra("unitCode", unitCode);
+                detailIntent.putExtra("basic", basic);
+                detailIntent.putExtra("vda", vda);
+                detailIntent.putExtra("sda", sda);
+                detailIntent.putExtra("totalEarning", totalEarning);
+                detailIntent.putExtra("totalDeduction", totalDeduction);
+                detailIntent.putExtra("netPaid", netPaid);
                 startActivity(detailIntent);
             }
         });
+    }
+
+    // store values of each field
+    private void storeValue(Detail salary){
+        name = salary.mName;
+        designation = salary.mDesignation;
+        unitCode = salary.mUnitCode;
+        basic = salary.mBasicSalary;
+        vda = salary.mVda;
+        sda = salary.mSda;
+        totalEarning = salary.mGrossAmount;
+        totalDeduction = salary.mTotalDeduction;
+        netPaid = salary.mNetPaid;
     }
 
     /**
