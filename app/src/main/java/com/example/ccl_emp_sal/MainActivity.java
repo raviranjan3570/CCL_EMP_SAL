@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
 
     String monthYearStr;
     String pis;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
         final EditText input = findViewById(R.id.user_id);
-        final EditText date_input= findViewById(R.id.date_input);
+        final EditText date_input = findViewById(R.id.date_input);
         final Button login = findViewById(R.id.login_button);
 
         // on click listener
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity  {
                 pickerDialog.setListener(new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int i2) {
-                        monthYearStr =  year + "/" + month + "/" + i2;
+                        monthYearStr = year + "/" + month + "/" + i2;
                         date_input.setText(monthYearStr);
                     }
                 });
@@ -63,8 +63,5 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
-        if (pis != null && date != null){
-
-        }
     }
 }
