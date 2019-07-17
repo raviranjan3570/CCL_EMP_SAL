@@ -20,26 +20,37 @@
             android:layout_height="48dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:layout_gravity="center_vertical"
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
                 android:text="Name :"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
 
             <TextView
                 android:id="@+id/name1"
                 android:textStyle="bold"
+                android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"
                 android:fontFamily="sans-serif-black"/>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -50,18 +61,25 @@
             <TextView
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:text="Designation :"
+                android:layout_weight="1"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-black"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
 
             <TextView
                 android:textStyle="bold"
                 android:id="@+id/designation1"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:textSize="16sp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
@@ -69,6 +87,11 @@
 
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:paddingLeft="16dp"
@@ -78,24 +101,36 @@
             <TextView
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
                 android:text="Unit Code :"/>
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
             <TextView
                 android:id="@+id/unit_code"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"/>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -106,24 +141,36 @@
             <TextView
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
+                android:layout_weight="1"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
                 android:text="Basic Paid :"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
 
             <TextView
                 android:id="@+id/basic_paid"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"/>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -134,24 +181,36 @@
             <TextView
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
+                android:layout_weight="1"
                 android:textSize="16sp"
                 android:text="VDA :"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
 
             <TextView
                 android:id="@+id/vda"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
+                android:layout_weight="1"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"/>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -162,24 +221,36 @@
             <TextView
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
+                android:layout_weight="1"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
                 android:text="SDA :"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
 
             <TextView
                 android:id="@+id/sda"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
                 android:paddingLeft="16dp"/>
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -190,25 +261,37 @@
             <TextView
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:fontFamily="sans-serif-black"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
                 android:text="Total Earning :"/>
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
             <TextView
                 android:id="@+id/total_earning1"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:fontFamily="sans-serif-black"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:paddingLeft="20dp"/>
 
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:paddingLeft="16dp"
@@ -218,18 +301,25 @@
             <TextView
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:paddingLeft="16dp"
                 android:textSize="16sp"
                 android:text="Total Deduction :"/>
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
             <TextView
                 android:id="@+id/deduction1"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
@@ -237,6 +327,11 @@
 
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:paddingLeft="16dp"
@@ -246,7 +341,8 @@
             <TextView
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textColor="#212121"
@@ -254,12 +350,18 @@
                 android:paddingLeft="16dp"
                 android:text="Net Paid :"/>
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
             <TextView
                 android:id="@+id/total_salary1"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
+                android:layout_weight="1"
                 android:textSize="24sp"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textColor="#212121"
                 android:fontFamily="sans-serif-black"

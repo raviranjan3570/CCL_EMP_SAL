@@ -40,7 +40,7 @@ public class SecondActivity extends AppCompatActivity {
     /**
      * Url will go here
      */
-    private static final String URL = "http://192.168.43.123/ccl/fetch.php";
+    private static final String URL = "http://dd4069f6.ngrok.io/ccl/fetch.php";
 
     // fields
     public String pis = null;
