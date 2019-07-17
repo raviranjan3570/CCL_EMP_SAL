@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 pickerDialog.setListener(new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int i2) {
-                        monthYearStr = year + "/" + month + "/" + i2;
+                        monthYearStr = year + "/" + month;
                         date_input.setText(monthYearStr);
                     }
                 });
