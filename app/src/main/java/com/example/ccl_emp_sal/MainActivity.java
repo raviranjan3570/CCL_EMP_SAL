@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText date_input = findViewById(R.id.date_input);
         final Button login = findViewById(R.id.login_button);
         final EditText user_password = findViewById(R.id.user_password);
+        final Button register = findViewById(R.id.register_button);
 
         // on click listener
         login.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 pickerDialog.show(getSupportFragmentManager(), "MonthYearPickerDialog");
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent loginIntent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(loginIntent);
             }
         });
 

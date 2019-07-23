@@ -23,6 +23,8 @@
         <activity android:name=".ThirdActivity"
             android:parentActivityName="com.example.ccl_emp_sal.MainActivity"/>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".RegisterActivity"
+            android:parentActivityName="com.example.ccl_emp_sal.MainActivity"/>
     </application>
 
 </manifest>

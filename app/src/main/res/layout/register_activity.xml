@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center|top">
 
-<ImageView
+    <ImageView
         android:id="@+id/profile_image"
         android:layout_width="96dp"
         android:layout_height="96dp"
@@ -15,8 +15,21 @@
         android:layout_marginEnd="8dp"
         android:src="@drawable/logo" />
 
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#212121"
+        android:textSize="24sp"
+        android:paddingLeft="16dp"
+        android:text="Enter the details"/>
+
     <EditText
-        android:id="@+id/user_id"
+        android:id="@+id/user_id_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -28,7 +41,7 @@
         android:hint="PIS_NO" />
 
     <EditText
-        android:id="@+id/user_password"
+        android:id="@+id/user_password_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -39,19 +52,18 @@
         android:hint="Password" />
 
     <EditText
-        android:id="@+id/date_input"
+        android:id="@+id/user_email_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:focusableInTouchMode="false"
         android:ems="10"
-        android:hint="Enter Month And Year"
-        android:fontFamily="sans-serif-light" />
+        android:fontFamily="sans-serif-light"
+        android:hint="Email" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:gravity="center"
         android:layout_height="wrap_content"
@@ -60,18 +72,6 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/rounded_button_1"
         android:fontFamily="sans-serif-black"
-        android:text="Already a user? Login" />
-
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="wrap_content"
-        android:gravity="center"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rounded_button_1"
-        android:fontFamily="sans-serif-black"
-        android:text="New User? REGISTER" />
+        android:text="Submit" />
 
 </LinearLayout>
