@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -57,6 +58,7 @@ public class SecondActivity extends AppCompatActivity {
     public String totalDeduction = null;
     public String netPaid = null;
 
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -141,6 +143,13 @@ public class SecondActivity extends AppCompatActivity {
     private class SalaryAsyncTask extends AsyncTask<java.net.URL, Void, Detail> {
 
         @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            progressDialog = ProgressDialog.show(SecondActivity.this,"Loading Data",null,true,true);
+        }
+
+        @Override
         protected Detail doInBackground(URL... urls) {
 
             // Create URL object
@@ -168,6 +177,7 @@ public class SecondActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Detail salary) {
 
+            progressDialog.dismiss();
             if (salary == null) {
                 return;
             }
