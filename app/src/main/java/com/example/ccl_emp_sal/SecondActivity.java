@@ -40,9 +40,10 @@ public class SecondActivity extends AppCompatActivity {
     /**
      * Url will go here
      */
-    private static final String URL = "http://dd4069f6.ngrok.io/ccl/fetch.php";
+    private static final String URL = "http://13f81bc9.ngrok.io/ccl/CCL_Server_Side_Script/login.php";
 
     // fields
+    public String password = null;
     public String pis = null;
     public String month = null;
     public String year = null;
@@ -67,6 +68,7 @@ public class SecondActivity extends AppCompatActivity {
         pis = intent.getStringExtra("pis");
         month = intent.getStringExtra("month");
         year = intent.getStringExtra("year");
+        password = intent.getStringExtra("password");
 
         // Kick off an {@link AsyncTask} to perform the network request
         SalaryAsyncTask task = new SalaryAsyncTask();
@@ -191,9 +193,9 @@ public class SecondActivity extends AppCompatActivity {
                 // for encoding particular input
                 Uri.Builder builder = new Uri.Builder()
                         .appendQueryParameter("pis", pis)
+                        .appendQueryParameter("password", password)
                         .appendQueryParameter("year", year)
                         .appendQueryParameter("month", month);
-
                 String query = builder.build().getEncodedQuery();
 
                 OutputStream os = urlConnection.getOutputStream();

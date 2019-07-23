@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     String monthYearStr;
     String pis;
+    String password;
     String date;
 
     @Override
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText input = findViewById(R.id.user_id);
         final EditText date_input = findViewById(R.id.date_input);
         final Button login = findViewById(R.id.login_button);
+        final EditText user_password = findViewById(R.id.user_password);
 
         // on click listener
         login.setOnClickListener(new View.OnClickListener() {
@@ -36,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 pis = input.getText().toString();
                 date = date_input.getText().toString();
+                password = user_password.getText().toString();
                 Intent loginIntent = new Intent(MainActivity.this, SecondActivity.class);
                 String[] separated = date.split("/");
                 String year = separated[0];
                 String monthOfTheYear = separated[1];
                 loginIntent.putExtra("pis", pis);
+                loginIntent.putExtra("password", password);
                 loginIntent.putExtra("year", year);
                 loginIntent.putExtra("month", monthOfTheYear);
                 startActivity(loginIntent);
