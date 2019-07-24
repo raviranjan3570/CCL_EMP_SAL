@@ -41,7 +41,7 @@ public class SecondActivity extends AppCompatActivity {
     /**
      * Url will go here
      */
-    private static final String URL = "http://13f81bc9.ngrok.io/ccl/CCL_Server_Side_Script/login.php";
+    private static final String URL = "http://943c11e7.ngrok.io/ccl/CCL_Server_Side_Script/fetch.php";
 
     // fields
     public String password = null;
@@ -68,9 +68,9 @@ public class SecondActivity extends AppCompatActivity {
         // gets the value of userId
         Intent intent = getIntent();
         pis = intent.getStringExtra("pis");
+        password = intent.getStringExtra("password");
         month = intent.getStringExtra("month");
         year = intent.getStringExtra("year");
-        password = intent.getStringExtra("password");
 
         // Kick off an {@link AsyncTask} to perform the network request
         SalaryAsyncTask task = new SalaryAsyncTask();
@@ -204,8 +204,8 @@ public class SecondActivity extends AppCompatActivity {
                 Uri.Builder builder = new Uri.Builder()
                         .appendQueryParameter("pis", pis)
                         .appendQueryParameter("password", password)
-                        .appendQueryParameter("year", year)
-                        .appendQueryParameter("month", month);
+                        .appendQueryParameter("month", month)
+                        .appendQueryParameter("year", year);
                 String query = builder.build().getEncodedQuery();
 
                 OutputStream os = urlConnection.getOutputStream();
@@ -226,7 +226,7 @@ public class SecondActivity extends AppCompatActivity {
                 }
 
             } catch (IOException e) {
-                Log.e(LOG_TAG,"Problem retrieving  the earthquake json results. ",e);
+                Log.e(LOG_TAG,"Problem retrieving  the salary from database. ",e);
             } finally {
                 if (urlConnection != null) {
                     urlConnection.disconnect();

@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     String finalResult ;
     HashMap<String,String> hashMap = new HashMap<>();
     HttpParse httpParse = new HttpParse();
-    String HttpURL = "http://13f81bc9.ngrok.io/ccl/CCL_Server_Side_Script/register.php";
+    String HttpURL = "http://943c11e7.ngrok.io/ccl/CCL_Server_Side_Script/register.php";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -87,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
             protected void onPreExecute() {
                 super.onPreExecute();
 
-                progressDialog = ProgressDialog.show(RegisterActivity.this,"Loading Data",null,true,true);
+                progressDialog = ProgressDialog.show(RegisterActivity.this,"Registering Data",null,true,true);
             }
 
             @Override
