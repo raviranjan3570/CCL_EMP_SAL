@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     HashMap<String,String> hashMap = new HashMap<>();
     HttpParse httpParse = new HttpParse();
-    String HttpURL = "http://943c11e7.ngrok.io/ccl/CCL_Server_Side_Script/login.php";
+    String HttpURL = "http://6b26737f.ngrok.io/ccl/CCL_Server_Side_Script/login.php";
     String finalResult ;
     String year;
     String monthOfTheYear;
@@ -149,7 +149,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
 
-                    Toast.makeText(MainActivity.this,httpResponseMsg,Toast.LENGTH_LONG).show();
+                    Toast toast = Toast.makeText(MainActivity.this, httpResponseMsg, Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.BOTTOM, 0, 0);
+                    toast.show();
 
                 }
             }

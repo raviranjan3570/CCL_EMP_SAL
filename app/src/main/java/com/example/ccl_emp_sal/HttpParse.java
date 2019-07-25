@@ -63,7 +63,7 @@ public class HttpParse {
                 FinalHttpData = bufferedReader.readLine();
             }
             else {
-                FinalHttpData = "Something Went Wrong";
+                FinalHttpData = "Can't connect to remote server";
             }
         } catch (Exception e) {
             e.printStackTrace();
