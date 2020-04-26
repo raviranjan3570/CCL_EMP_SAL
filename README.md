@@ -8,7 +8,6 @@ Pre-requisites
 
 - Android SDK v28
 - Android Build Tools v28.0.3
-- Android Support Repository v23.3.0
 
 Getting Started
 ---------------
@@ -25,7 +24,7 @@ submitting a pull request through GitHub. Please see CONTRIBUTING.md for more de
 License
 -------
 
-Copyright 2016 The Android Open Source Project, Inc.
+Copyright 2020 The Android Open Source Project, Inc.
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
