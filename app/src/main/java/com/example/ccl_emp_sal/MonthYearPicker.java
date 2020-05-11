@@ -11,10 +11,10 @@ import android.view.View;
 import android.widget.NumberPicker;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 public class MonthYearPicker extends DialogFragment {
 
-    private static final int MAX_YEAR = 2099;
     private DatePickerDialog.OnDateSetListener listener;
 
     public void setListener(DatePickerDialog.OnDateSetListener listener) {
@@ -25,7 +25,7 @@ public class MonthYearPicker extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Get the layout inflater
-        LayoutInflater inflater = getActivity().getLayoutInflater();
+        LayoutInflater inflater = Objects.requireNonNull(getActivity()).getLayoutInflater();
 
         Calendar cal = Calendar.getInstance();
 

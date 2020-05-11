@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -23,8 +23,8 @@
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
                 android:fontFamily="sans-serif-black"
-                android:paddingLeft="16dp"
-                android:text="Name :"
+                android:paddingStart="16dp"
+                android:text="@string/name"
                 android:textSize="16sp"
                 android:textStyle="bold" />
             <View
@@ -40,7 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:fontFamily="sans-serif-black"/>
 
         </LinearLayout>
@@ -52,7 +52,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -61,8 +61,8 @@
                 android:layout_gravity="center_vertical"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:text="Designation :"
+                android:paddingStart="16dp"
+                android:text="@string/designation"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-black"/>
@@ -80,7 +80,7 @@
                 android:layout_weight="1"
                 android:textSize="16sp"
                 android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:fontFamily="sans-serif-black"/>
 
         </LinearLayout>
@@ -92,7 +92,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -103,9 +103,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-black"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:textSize="16sp"
-                android:text="Unit Code :"/>
+                android:text="@string/unit_code"/>
 
             <View
                 android:layout_width="1dp"
@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
-                android:paddingLeft="16dp"/>
+                android:paddingStart="16dp"/>
 
         </LinearLayout>
 
@@ -132,7 +132,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -143,9 +143,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:layout_weight="1"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:textSize="16sp"
-                android:text="Basic Paid :"/>
+                android:text="@string/basic_paid"/>
 
             <View
                 android:layout_width="1dp"
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
-                android:paddingLeft="16dp"/>
+                android:paddingStart="16dp"/>
 
         </LinearLayout>
 
@@ -172,7 +172,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -182,10 +182,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:text="VDA :"/>
+                android:text="@string/vda"/>
 
             <View
                 android:layout_width="1dp"
@@ -201,7 +201,7 @@
                 android:fontFamily="sans-serif-black"
                 android:layout_weight="1"
                 android:textSize="16sp"
-                android:paddingLeft="16dp"/>
+                android:paddingStart="16dp"/>
 
         </LinearLayout>
 
@@ -212,7 +212,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -223,9 +223,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:layout_weight="1"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:textSize="16sp"
-                android:text="SDA :"/>
+                android:text="@string/sda"/>
 
             <View
                 android:layout_width="1dp"
@@ -241,7 +241,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
-                android:paddingLeft="16dp"/>
+                android:paddingStart="16dp"/>
 
         </LinearLayout>
 
@@ -252,7 +252,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -263,9 +263,9 @@
                 android:fontFamily="sans-serif-black"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:textSize="16sp"
-                android:text="Total Earning :"/>
+                android:text="@string/total_earning"/>
 
             <View
                 android:layout_width="1dp"
@@ -281,7 +281,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:paddingLeft="20dp"/>
+                android:paddingStart="20dp"/>
 
         </LinearLayout>
 
@@ -292,7 +292,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -303,9 +303,9 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:paddingLeft="16dp"
+                android:paddingStart="16dp"
                 android:textSize="16sp"
-                android:text="Total Deduction :"/>
+                android:text="@string/total_deduction"/>
 
             <View
                 android:layout_width="1dp"
@@ -321,7 +321,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:textSize="16sp"
-                android:paddingLeft="16dp"/>
+                android:paddingStart="16dp"/>
 
         </LinearLayout>
 
@@ -332,7 +332,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
             android:layout_width="match_parent"
             android:layout_height="48dp">
 
@@ -345,8 +345,8 @@
                 android:fontFamily="sans-serif-black"
                 android:textColor="#212121"
                 android:textSize="24sp"
-                android:paddingLeft="16dp"
-                android:text="Net Paid :"/>
+                android:paddingStart="16dp"
+                android:text="@string/net_paid"/>
 
             <View
                 android:layout_width="1dp"
@@ -363,7 +363,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#212121"
                 android:fontFamily="sans-serif-black"
-                android:paddingLeft="16dp"/>
+                android:paddingStart="16dp"/>
 
         </LinearLayout>
 

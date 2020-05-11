@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">CCl_EMP_SAL</string>
+    <string name="pis_hint">PIS_NO</string>
+    <string name="submit">Submit</string>
+    <string name="email">Email</string>
+    <string name="pis_no">PIS_NO</string>
+    <string name="enter_the_details">Enter the details</string>
+    <string name="description">logo</string>
+    <string name="new_user_register">New User? REGISTER</string>
+    <string name="already_a_user_login">Already a user? Login</string>
+    <string name="password">Password</string>
+    <string name="enter_month_and_year">Enter Month And Year</string>
+    <string name="logo_of_profile">logo of profile</string>
+    <string name="salary_structure">Salary Structure</string>
+    <string name="click_here_for_details">Click here for details</string>
+    <string name="name">Name :</string>
+    <string name="designation">Designation :</string>
+    <string name="unit_code">Unit Code :</string>
+    <string name="basic_paid">Basic Paid :</string>
+    <string name="vda">VDA :</string>
+    <string name="sda">SDA :</string>
+    <string name="total_earning">Total Earning :</string>
+    <string name="total_deduction">Total Deduction :</string>
+    <string name="net_paid">Net Paid :</string>
 </resources>

@@ -1,25 +1,17 @@
 package com.example.ccl_emp_sal;
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.InputType;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     HashMap<String,String> hashMap = new HashMap<>();
     HttpParse httpParse = new HttpParse();
-    String HttpURL = "http://6b26737f.ngrok.io/ccl/CCL_Server_Side_Script/login.php";
+    String HttpURL = "http://dc1aa186.ngrok.io/ccl/CCL_Server_Side_Script/login.php";
     String finalResult ;
     String year;
     String monthOfTheYear;

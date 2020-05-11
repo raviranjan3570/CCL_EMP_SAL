@@ -1,7 +1,6 @@
 package com.example.ccl_emp_sal;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -11,9 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,7 +26,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -41,7 +38,7 @@ public class SecondActivity extends AppCompatActivity {
     /**
      * Url will go here
      */
-    private static final String URL = "http://6b26737f.ngrok.io/ccl/CCL_Server_Side_Script/fetch.php";
+    private static final String URL = "http://dc1aa186.ngrok.io/ccl/CCL_Server_Side_Script/fetch.php";
 
     // fields
     public String password = null;
@@ -125,15 +122,18 @@ public class SecondActivity extends AppCompatActivity {
 
         // Display the total earning in the UI
         TextView grossAmountTextView = findViewById(R.id.total_earning);
-        grossAmountTextView.setText(salary.mGrossAmount + " \u20B9");
+        String gross = salary.mGrossAmount + " \u20B9";
+        grossAmountTextView.setText(gross);
 
         // Display the deduction in the UI
         TextView deductionTextView = findViewById(R.id.deduction);
-        deductionTextView.setText(salary.mTotalDeduction + " \u20B9");
+        String deduction = salary.mTotalDeduction + " \u20B9";
+        deductionTextView.setText(deduction);
 
         // Display the net salary in the UI
         TextView netSalaryTextView = findViewById(R.id.total_salary);
-        netSalaryTextView.setText(salary.mNetPaid + " \u20B9");
+        String net = salary.mNetPaid + " \u20B9";
+        netSalaryTextView.setText(net);
     }
 
     /**
@@ -153,21 +153,21 @@ public class SecondActivity extends AppCompatActivity {
         protected Detail doInBackground(URL... urls) {
 
             // Create URL object
-            URL url = createUrl(URL);
+            URL url = createUrl();
 
             // Perform HTTP request to the URL and receive a JSON response back
             String jsonResponse = "";
             try {
+                assert url != null;
                 jsonResponse = makeHttpRequest(url);
             } catch (IOException e) {
                 // TODO Handle the IOException
             }
 
             // Extract relevant fields from the JSON response and create an {@link Event} object
-            Detail salary = extractFeatureFromJson(jsonResponse);
 
             // Return the {@link Event} object as the result fo the {@link SalaryAsyncTask}
-            return salary;
+            return extractFeatureFromJson(jsonResponse);
         }
 
         /**
@@ -210,7 +210,8 @@ public class SecondActivity extends AppCompatActivity {
 
                 OutputStream os = urlConnection.getOutputStream();
                 BufferedWriter writer = new BufferedWriter(
-                        new OutputStreamWriter(os, "UTF-8"));
+                        new OutputStreamWriter(os, StandardCharsets.UTF_8));
+                assert query != null;
                 writer.write(query);
                 writer.flush();
                 writer.close();
@@ -242,10 +243,10 @@ public class SecondActivity extends AppCompatActivity {
         /**
          * Returns new URL object from the given string URL.
          */
-        private URL createUrl(String stringUrl) {
-            URL url = null;
+        private URL createUrl() {
+            URL url;
             try {
-                url = new URL(stringUrl);
+                url = new URL(SecondActivity.URL);
             } catch (MalformedURLException exception) {
                 Log.e(LOG_TAG, "Error with creating URL", exception);
                 return null;
@@ -260,7 +261,7 @@ public class SecondActivity extends AppCompatActivity {
         private String readFromStream(InputStream inputStream) throws IOException {
             StringBuilder output = new StringBuilder();
             if (inputStream != null) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
                 BufferedReader reader = new BufferedReader(inputStreamReader);
                 String line = reader.readLine();
                 while (line != null) {

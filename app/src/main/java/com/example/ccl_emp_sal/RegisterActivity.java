@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     String finalResult ;
     HashMap<String,String> hashMap = new HashMap<>();
     HttpParse httpParse = new HttpParse();
-    String HttpURL = "http://6b26737f.ngrok.io/ccl/CCL_Server_Side_Script/register.php";
+    String HttpURL = "http://dc1aa186.ngrok.io/ccl/CCL_Server_Side_Script/register.php";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,14 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
         email = user_email.getText().toString();
         password = user_password.getText().toString();
 
-        if(TextUtils.isEmpty(pis) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password) )
-        {
-            CheckEditText = false;
-        }
-        else {
-
-            CheckEditText = true ;
-        }
+        CheckEditText = !TextUtils.isEmpty(pis) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password);
     }
 
     // sends data to remote server
